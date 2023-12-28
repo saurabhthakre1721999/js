@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      class="first"
+      type="search"
+      name=""
+      id="search"
+      class="first"
+      placeholder="search here"
+    />
+    <script>
+      const rack = document.getElementById("search");
+      console.log({ rack });
+      rack.addEventListener("keydown", (event) => {
+        const { id, className, placeholder, value } = event.target;
+        console.log("keydown target:  ", event.target);
+        console.log("keydown value:   ", value);
+        console.log("keydown id:", id);
+
+        console.log("keydown placeholer:", placeholder);
+        console.log("keydown class:", className);
+      });
+    </script>
+  </body>
+</html>
